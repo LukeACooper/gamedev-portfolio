@@ -1,7 +1,33 @@
 <!-- Portfolio Modals -->
+
+<!-- Custom CSS for Accordion Buttons -->
+<style>
+  .custom-accordion-btn {
+    display: block;
+    background-color: #18bc9c;
+    color: white !important;
+    padding: 12px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .custom-accordion-btn:hover, .custom-accordion-btn:focus {
+    background-color: #128f76;
+    text-decoration: none;
+    color: white !important;
+  }
+  .custom-accordion-btn i {
+    transition: transform 0.3s ease;
+  }
+  /* Flips the arrow upside down when the tab is open */
+  .custom-accordion-btn[aria-expanded="true"] i {
+    transform: rotate(180deg);
+  }
+</style>
+
 {% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
-  aria-hidden="true">
+<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-content">
     <div class="close-modal" data-dismiss="modal">
       <div class="lr">
@@ -16,6 +42,7 @@
             <h2>{{ post.title }}</h2>
             <hr class="star-primary">
             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+            
             {% if post.description %}
             <p>{{ post.description }}</p>
             {% endif %}
@@ -30,19 +57,22 @@
               <div class="panel-group" id="accordion-{{ post.modal-id }}" style="margin-bottom: 20px; text-align: left;">
                 
                 {% for item in post.accordions %}
-                  <div class="panel panel-default">
-                    <div class="panel-heading" id="heading-{{ post.modal-id }}-{{ forloop.index }}">
+                  <div class="panel panel-default" style="border: none; box-shadow: none;">
+                    <div class="panel-heading" id="heading-{{ post.modal-id }}-{{ forloop.index }}" style="background: transparent; padding: 0 0 5px 0;">
                       <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion-{{ post.modal-id }}" href="#collapse-{{ post.modal-id }}-{{ forloop.index }}">
+                        <!-- Upgraded Button Logic -->
+                        <a class="custom-accordion-btn" role="button" data-toggle="collapse" data-parent="#accordion-{{ post.modal-id }}" href="#collapse-{{ post.modal-id }}-{{ forloop.index }}" aria-expanded="false">
                           {{ item.title }}
+                          <i class="fa fa-chevron-down pull-right"></i>
                         </a>
                       </h4>
                     </div>
                     <div id="collapse-{{ post.modal-id }}-{{ forloop.index }}" class="panel-collapse collapse">
-                      <div class="panel-body">
+                      <div class="panel-body" style="border-top: none; padding: 15px 0;">
                           {{ item.content }}
+                          
                           {% if item.image %}
-                            <img src="img/portfolio/{{ item.image }}" class="img-responsive" style="margin-bottom: 15px; border-radius: 4px" alt="{{ item.title }} visual">
+                            <img src="img/portfolio/{{ item.image }}" class="img-responsive" style="margin-top: 15px; margin-bottom: 15px; border-radius: 4px" alt="{{ item.title }} visual">
                           {% endif %}
                           {% if item.image2 %}
                             <img src="img/portfolio/{{ item.image2 }}" class="img-responsive" style="margin-bottom: 15px; border-radius: 4px" alt="{{ item.title }} visual 2">
@@ -52,7 +82,7 @@
                           {% endif %}
 
                           {% if item.youtube_id %}
-                            <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 20px;">
+                            <div class="embed-responsive embed-responsive-16by9" style="margin-bottom: 20px; margin-top: 15px;">
                               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ item.youtube_id }}" allowfullscreen></iframe>
                             </div>
                           {% endif %}
@@ -63,7 +93,7 @@
               </div>
             {% endif %}
 
-            <ul class="list-inline item-details">
+            <ul class="list-inline item-details" style="margin-top: 30px;">
               {% if post.client %}
               <li>Client:
                 <strong>{{ post.client }}</strong>
@@ -92,8 +122,9 @@
               </a>
             {% endif %}
 
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-left: 10px;">
+              <i class="fa fa-times"></i> Close
+            </button>
           </div>
         </div>
       </div>
