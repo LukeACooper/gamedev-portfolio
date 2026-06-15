@@ -2,7 +2,7 @@
 layout: default
 modal-id: 3
 date: 2026-03-15
-img: game.png
+img: AdvancedTech.png
 alt: Advanced Technologies thumbnail
 category: Experimental game mechanics, WebAR
 client: UWE Bristol - Advanced Technologies Module
