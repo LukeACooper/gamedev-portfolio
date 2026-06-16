@@ -17,7 +17,7 @@ accordions:
     - title: "Environment Design"
       content: "I also created these sprites for the environment; this also involved settling on colour palettes specifically tailored to the aesthetic we were after: a neofuturistic, cyber cityscape."
       image: TL.png
-      image2: TL_Roof.png
+      image2: TR_Roof.png
 
 project_url: "https://ieuanrhys25.itch.io/p4int-th3-t0wn-n30n"
 project_button_text: "Play for free on Itch!"
