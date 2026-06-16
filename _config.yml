@@ -1,5 +1,5 @@
 # Site settings
-title: "| Luke Cooper | Portfolio"
+title: "Luke Cooper - Portfolio"
 email: lukeacooper97@gmail.com
 url: https://github.com/jeromelachaud/freelancer-theme
 description: "This is my portfolio of projects, including my university projects, as well as some individual and group projects."
@@ -28,7 +28,7 @@ color:
   primary: 2a9d8f
   primary-rgb: "42, 157, 143"
   secondary: e9c46a
-  secondary-dark: 264653
+  secondary-dark: fe6900
 
 # Footer settings
 footer:
