@@ -1,4 +1,41 @@
 <!-- Navigation -->
+<style>
+  /* Custom Navbar Palette */
+  .navbar-default {
+    background-color: #264653 !important; /* Dark Blue Background */
+    border: none !important;
+  }
+  .navbar-default .navbar-brand {
+    color: #F4F1DE !important; /* Eggshell Text */
+    font-weight: 700;
+  }
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #FE6900 !important; /* Orange Hover */
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #F4F1DE !important; /* Eggshell Links */
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #FE6900 !important; /* Orange Hover */
+  }
+  
+  /* Mobile Toggle Button Styling */
+  .navbar-default .navbar-toggle {
+    border-color: #F4F1DE;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #F4F1DE;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #2A9D8F; /* Teal highlight on mobile click */
+  }
+</style>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,12 +55,12 @@
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
+        <!-- Fixed nested list tags here -->
         <li class="page-scroll">
-          <a href="#cv">Profile</a>
-          <li class="page-scroll">
-          <a href="#portfolio">Projects</a>
+          <a href="#CV">Profile</a>
         </li>
-        
+        <li class="page-scroll">
+          <a href="#portfolio">Projects</a>
         </li>
       </ul>
     </div>

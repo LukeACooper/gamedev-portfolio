@@ -7,6 +7,24 @@
   footer h1, footer h2, footer h3, footer h4, footer span, footer p, footer li, footer strong {
     color: #F4F1DE !important;
   }
+
+  /* Dynamic Responsive Spacing */
+  /* 1. Mobile Default (Tight Padding) */
+  section {
+    padding: 50px 0; 
+  }
+  header {
+    padding: 100px 0 50px; /* Accounts for the fixed navbar */
+  }
+  /* 2. Desktop Default (Reduced from Template Default) */
+  @media(min-width: 768px) {
+    section {
+      padding: 80px 0; 
+    }
+    header {
+      padding: 130px 0 80px; 
+    }
+  }
 </style>
 
 <header class="success" id="CV">
