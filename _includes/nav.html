@@ -1,27 +1,29 @@
 <!-- Navigation -->
 <style>
+  /* Custom Navbar Palette */
   .navbar-default {
-    background-color: #264653 !important;
+    background-color: #264653 !important; /* Dark Blue Background */
     border: none !important;
   }
   .navbar-default .navbar-brand {
-    color: #F4F1DE !important;
+    color: #F4F1DE !important; /* Eggshell Text */
     font-weight: 700;
   }
   .navbar-default .navbar-brand:hover,
   .navbar-default .navbar-brand:focus {
-    color: #FE6900 !important;
+    color: #FE6900 !important; /* Orange Hover */
   }
   .navbar-default .navbar-nav > li > a {
-    color: #F4F1DE !important;
+    color: #F4F1DE !important; /* Eggshell Links */
     font-weight: 600;
     text-transform: uppercase;
   }
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus {
-    color: #FE6900 !important;
+    color: #FE6900 !important; /* Orange Hover */
   }
-
+  
+  /* Mobile Toggle Button Styling */
   .navbar-default .navbar-toggle {
     border-color: #F4F1DE;
   }
@@ -47,11 +49,13 @@
       <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
     </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
+        <!-- Fixed nested list tags here -->
         <li class="page-scroll">
           <a href="#CV">Profile</a>
         </li>
