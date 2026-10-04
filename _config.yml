@@ -1,10 +1,10 @@
 # Site settings
-title: "Luke Cooper - Portfolio"
+title: "Luke Cooper | Game Developer Portfolio"
 email: lukeacooper97@gmail.com
 url: https://github.com/jeromelachaud/freelancer-theme
-description: "This is my portfolio of projects, including my university projects, as well as some individual and group projects."
+description: "My game developer portfolio - a working document showcasing my development and progression throughout numerous personal and academic projects."
 keywords: "game developer, games design, level design, environment art, technical level design, portfolio"
-skills: "Game Developer - Gameplay Programmer, Technical 3D / VFX / Environment Artist"
+skills: "Game Developer - Gameplay Programmer & Technical Level Designer"
 meta_author: Cooper Luke
 
 # Google webmaster tools
@@ -13,10 +13,6 @@ google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 
-# Contact form:
-# - static : pass through formspree.io to validate email sending
-# - disqus : replace contact form by disqus thread
-# - comment the line below if you want to stick with the default PHP contact form
 contact: static
 
 # If you use disqus you need disqus shortname
